@@ -59,8 +59,19 @@ while usedCheck:
             print (newUsed)
         used.append(newUsed)
         
-        
+#print possible words
 
-#for counter in range(word_length):
-#    print(counter)
+print("possible words are")
+possible_words = []
+for x in five_letter_words:
+    #do stuff
+    
+print (possibe_words)
 
+#value = str(input("do you wish to continue [y/n]"))
+#
+#if value == "y":
+#    True
+#if value == "n":
+#    False
+#
