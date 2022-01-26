@@ -64,7 +64,13 @@ while usedCheck:
 print("possible words are")
 possible_words = []
 for x in five_letter_words:
-    #do stuff
+    if x contains any letter from used
+        continue
+    for counter in word_length
+        if x[counter] != green[counter]
+            continue
+        if x[counter] != any yellow
+            
     
 print (possibe_words)
 
