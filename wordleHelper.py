@@ -37,7 +37,19 @@ while yellowCheck:
         print ("exiting yellows")
         yellowCheck = False
     else:
-        yellow.append(input(string))
+        yellow.append(newYellow)
+        
+print ("enter used letters. Press enter when finished")
+used = []
+usedCheck = True
+while usedCheck:
+    string = 'enter used letter: '
+    newUsed = str(input(string))
+    if not newUsed:
+        print ("exiting used")
+        usedCheck = False
+    else:
+        used.append(newUsed)
         
         
 
