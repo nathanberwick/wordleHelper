@@ -20,7 +20,7 @@ print ("enter green letters. Press enter to skip")
 green = []
 for counter in range(word_length):
     string = 'enter green letter ' + str(counter) + ': '
-    newGreen = input(string)
+    newGreen = (input(string))
     if len(newGreen) > 1:
         print ("too big! extracting first letter")
         newGreen = newGreen[0]
@@ -32,14 +32,14 @@ yellow = []
 yellowCheck = True
 while yellowCheck:
     string = 'enter yellow letter: '
-    newYellow = input(string)
-    print (newYellow)
-    #if(newYellow == ''):
-    #    print ("exiting yellows")
-    #    yellowCheck = False
-    yellow.append(input(string))
-    
-    
+    newYellow = str(input(string))
+    if not newYellow:
+        print ("exiting yellows")
+        yellowCheck = False
+    else:
+        yellow.append(input(string))
+        
+        
 
 #for counter in range(word_length):
 #    print(counter)
