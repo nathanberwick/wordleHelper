@@ -37,6 +37,10 @@ while yellowCheck:
         print ("exiting yellows")
         yellowCheck = False
     else:
+        if len(newYellow) > 1:
+            print ("too big! extracting first letter")
+            newYellow = newYellow[0]
+            print (newYellow)
         yellow.append(newYellow)
         
 print ("enter used letters. Press enter when finished")
@@ -49,6 +53,10 @@ while usedCheck:
         print ("exiting used")
         usedCheck = False
     else:
+        if len(newUsed) > 1:
+            print ("too big! extracting first letter")
+            newUsed = newUsed[0]
+            print (newUsed)
         used.append(newUsed)
         
         
