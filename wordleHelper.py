@@ -10,50 +10,40 @@ if __name__ == '__main__':
     english_words = load_words()
     
     #extract five letter words
-    five_letter_words = [x for x in english_words if len(x) == word_length]
+    english_words = list(filter(lambda i: len(i)== word_length, english_words))
+    #five_letter_words = [x for x in english_words if len(x) == word_length]
+    
     
 print ("enter green letters. Press enter to skip")
 green = []
 for counter in range(word_length):
     string = 'enter green letter ' + str(counter) + ': '
-    newGreen = (input(string))
+    newGreen = input(string)
     if len(newGreen) > 1:
         print ("too big! extracting first letter")
         newGreen = newGreen[0]
         print (newGreen)
     green.append(newGreen)
     
-print ("enter yellow letters. Press enter when finished")
 yellow = []
-yellowCheck = True
-while yellowCheck:
-    string = 'enter yellow letter: '
-    newYellow = str(input(string))
-    if not newYellow:
-        print ("exiting yellows")
-        yellowCheck = False
-    else:
-        if len(newYellow) > 1:
-            print ("too big! extracting first letter")
-            newYellow = newYellow[0]
-            print (newYellow)
-        yellow.append(newYellow)
+print ("enter yellow letters. Press enter to finish number")
+for counter in range(word_length):
+    string = 'enter all yellow letters at position ' + str(counter) + ': '
+    newYellow = list(input(string))
+    if len(newYellow) > word_length:
+        print("too big! extracting first five letters")
+        newYellow = newYellow[:5]
+        print(newYellow)
+    yellow.append(newYellow)
         
-print ("enter used letters. Press enter when finished")
+print ("enter not-present letters. Press enter when finished")
 used = []
-usedCheck = True
-while usedCheck:
-    string = 'enter used letter: '
-    newUsed = str(input(string))
-    if not newUsed:
-        print ("exiting used")
-        usedCheck = False
-    else:
-        if len(newUsed) > 1:
-            print ("too big! extracting first letter")
-            newUsed = newUsed[0]
-            print (newUsed)
-        used.append(newUsed)
+string = 'enter used letters: '
+newUsed = list(input(string))
+if not newUsed:
+    print("no not-present letters. Exiting used.")
+else:
+    used.append(newUsed)
         
 #print possible words
 
