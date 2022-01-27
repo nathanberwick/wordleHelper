@@ -13,6 +13,8 @@ if __name__ == '__main__':
     english_words = list(filter(lambda i: len(i)== word_length, english_words))
     #five_letter_words = [x for x in english_words if len(x) == word_length]
     
+
+#user input
     
 print ("enter green letters. Press enter to skip")
 green = []
@@ -34,6 +36,8 @@ for counter in range(word_length):
         print("too big! extracting first five letters")
         newYellow = newYellow[:5]
         print(newYellow)
+    #if green[counter] in yellow[counter]
+    #    remove this letter!
     yellow.append(newYellow)
         
 used = []
@@ -44,6 +48,9 @@ if not newUsed:
     print("no used letters. Exiting used.")
 else:
     used.append(newUsed)
+    
+    
+#TODO: check through used and see if any letters are present in green or yellow
         
 #print possible words
 
