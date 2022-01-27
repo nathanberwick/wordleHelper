@@ -10,11 +10,7 @@ if __name__ == '__main__':
     english_words = load_words()
     
     #extract five letter words
-    five_letter_words = []
-    for x in english_words:
-        if(len(x) == word_length):
-            five_letter_words.append(x)
-    #print(five_letter_words)
+    five_letter_words = [x for x in english_words if len(x) == word_length]
     
 print ("enter green letters. Press enter to skip")
 green = []
@@ -61,18 +57,18 @@ while usedCheck:
         
 #print possible words
 
-print("possible words are")
-possible_words = []
-for x in five_letter_words:
-    if x contains any letter from used
-        continue
-    for counter in word_length
-        if x[counter] != green[counter]
-            continue
-        if x[counter] != any yellow
-            
-    
-print (possibe_words)
+#print("possible words are")
+#possible_words = []
+#for x in five_letter_words:
+#    if x contains any letter from used
+#        continue
+#    for counter in word_length
+#        if x[counter] != green[counter]
+#            continue
+#        if x[counter] != any yellow
+#
+#
+#print (possibe_words)
 
 #value = str(input("do you wish to continue [y/n]"))
 #
