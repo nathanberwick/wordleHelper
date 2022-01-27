@@ -36,12 +36,12 @@ for counter in range(word_length):
         print(newYellow)
     yellow.append(newYellow)
         
-print ("enter not-present letters. Press enter when finished")
 used = []
+print ("enter not-present letters. Press enter when finished")
 string = 'enter used letters: '
 newUsed = list(input(string))
 if not newUsed:
-    print("no not-present letters. Exiting used.")
+    print("no used letters. Exiting used.")
 else:
     used.append(newUsed)
         
